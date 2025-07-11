@@ -9,7 +9,7 @@ body {
     font-family: 'Roboto', sans-serif;
     line-height: 1.6;
     color: #333;
-    background-color: #f9f9f9;
+    background-color: #f0f4f8; /* Latar belakang lembut */
 }
 
 .container {
@@ -20,7 +20,7 @@ body {
 
 /* Header Styles */
 header {
-    background-color: #fff;
+    background-color: #2c3e50; /* Biru tua gelap */
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     position: sticky;
     top: 0;
@@ -37,7 +37,7 @@ header .container {
 .logo {
     font-family: 'Playfair Display', serif;
     font-size: 28px;
-    color: #2c3e50;
+    color: #fff; /* Teks putih untuk kontras */
     text-decoration: none;
 }
 
@@ -45,6 +45,7 @@ header .container {
     font-size: 24px;
     cursor: pointer;
     display: none;
+    color: #fff;
 }
 
 nav ul {
@@ -58,17 +59,17 @@ nav ul li {
 
 nav ul li a {
     text-decoration: none;
-    color: #2c3e50;
+    color: #fff;
     font-size: 16px;
     transition: color 0.3s ease;
 }
 
 nav ul li a:hover {
-    color: #e74c3c;
+    color: #3498db; /* Biru cerah untuk hover */
 }
 
 .cta-small {
-    background-color: #e74c3c;
+    background-color: #e74c3c; /* Merah korall */
     color: #fff;
     padding: 8px 15px;
     border-radius: 5px;
@@ -77,31 +78,32 @@ nav ul li a:hover {
 }
 
 .cta-small:hover {
-    background-color: #c0392b;
+    background-color: #c0392b; /* Merah tua */
 }
 
 /* Hero Section */
 .hero {
-    text-align: center;
-    padding: 60px 20px;
-    background: url('../assets/images/hero-bg.jpg') no-repeat center center/cover;
+    background: linear-gradient(135deg, #3498db, #e74c3c); /* Gradient biru-merah */
+    padding: 80px 20px;
     color: #fff;
+    text-align: center;
     margin-bottom: 40px;
 }
 
 .hero h2 {
-    font-size: 36px;
+    font-size: 40px;
     margin-bottom: 20px;
     font-family: 'Playfair Display', serif;
 }
 
 .hero p {
     font-size: 18px;
-    margin-bottom: 30px;
+    max-width: 600px;
+    margin: 0 auto 30px;
 }
 
 .cta-button {
-    background-color: #e74c3c;
+    background-color: #3498db; /* Biru cerah */
     color: #fff;
     padding: 12px 25px;
     text-decoration: none;
@@ -111,7 +113,7 @@ nav ul li a:hover {
 }
 
 .cta-button:hover {
-    background-color: #c0392b;
+    background-color: #2980b9; /* Biru tua */
 }
 
 /* Kategori Section */
@@ -143,6 +145,7 @@ nav ul li a:hover {
     text-decoration: none;
     color: #2c3e50;
     transition: transform 0.3s ease;
+    display: block;
 }
 
 .category-card:hover {
@@ -172,8 +175,8 @@ nav ul li a:hover {
 
 article {
     background-color: #fff;
-    border-radius: 8px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
     overflow: hidden;
     opacity: 0;
     transform: translateY(20px);
@@ -261,7 +264,7 @@ article ul li {
 
 /* Footer Styles */
 footer {
-    background-color: #2c3e50;
+    background-color: #2c3e50; /* Biru tua gelap */
     color: #fff;
     padding: 40px 0;
     margin-top: 40px;
@@ -276,7 +279,7 @@ footer p {
 }
 
 footer a {
-    color: #e74c3c;
+    color: #e74c3c; /* Merah korall */
     text-decoration: none;
     margin: 0 10px;
 }
@@ -304,7 +307,7 @@ footer a:hover {
 
 .newsletter button {
     padding: 8px 15px;
-    background-color: #e74c3c;
+    background-color: #e74c3c; /* Merah korall */
     color: #fff;
     border: none;
     border-radius: 5px;
@@ -313,13 +316,16 @@ footer a:hover {
 }
 
 .newsletter button:hover {
-    background-color: #c0392b;
+    background-color: #c0392b; /* Merah tua */
 }
 
 /* Responsive Design */
 @media (max-width: 768px) {
     .nav-toggle {
         display: block;
+        position: absolute;
+        right: 20px; /* Geser ke pinggir kanan */
+        top: 15px;
     }
 
     nav ul {
@@ -328,7 +334,7 @@ footer a:hover {
         top: 60px;
         left: 0;
         width: 100%;
-        background-color: #fff;
+        background-color: #2c3e50;
         flex-direction: column;
         padding: 20px 0;
         box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
