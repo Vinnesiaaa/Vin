@@ -1,42 +1,45 @@
 // Vin Nesia JavaScript
-// Last Updated: 2025-07-12T06:23:00+07:00
+// Last Updated: 2025-07-12T06:35:00+07:00
 
 document.addEventListener('DOMContentLoaded', () => {
     // Toggle Navigation
     const navToggle = document.querySelector('.nav-toggle');
     const nav = document.querySelector('nav ul');
 
-    navToggle.addEventListener('click', () => {
-        nav.classList.toggle('active');
-    });
+    if (navToggle && nav) {
+        navToggle.addEventListener('click', () => {
+            nav.classList.toggle('active');
+        });
+    }
 
     // Filter Categories
     const categoryButtons = document.querySelectorAll('.category-btn');
     const articles = document.querySelectorAll('article');
 
-    categoryButtons.forEach(button => {
-        button.addEventListener('click', () => {
-            // Remove active class from all buttons
-            categoryButtons.forEach(btn => btn.classList.remove('active'));
-            // Add active class to clicked button
-            button.classList.add('active');
+    if (categoryButtons.length > 0 && articles.length > 0) {
+        categoryButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                // Remove active class from all buttons
+                categoryButtons.forEach(btn => btn.classList.remove('active'));
+                // Add active class to clicked button
+                button.classList.add('active');
 
-            const category = button.getAttribute('data-category');
+                const category = button.getAttribute('data-category');
 
-            articles.forEach(article => {
-                if (category === 'all') {
-                    article.style.display = 'block';
-                } else {
+                articles.forEach(article => {
                     const articleCategory = article.getAttribute('data-category');
-                    if (articleCategory === category) {
+                    if (category === 'all' || articleCategory === category) {
                         article.style.display = 'block';
                     } else {
                         article.style.display = 'none';
                     }
-                }
+                });
             });
         });
-    });
+
+        // Set default to 'all' on load
+        categoryButtons[0].click(); // Klik tombol "Semua" secara otomatis
+    }
 
     // Animate on Scroll
     const animateElements = document.querySelectorAll('.animate-fade, .animate-slide');
