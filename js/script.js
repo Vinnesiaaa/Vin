@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', () => {
-    console.log('Vin Nesia Blog Loaded - Updated 2025-07-12 03:43 WIB');
+    console.log('Vin Nesia Blog Loaded - Updated 2025-07-12 04:26 WIB');
 
     // Hamburger menu toggle with adjusted positioning awareness
     const navToggle = document.querySelector('.nav-toggle');
@@ -31,9 +31,8 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     // Handle "Baca Sekarang" button click to ensure navigation
-    const readNowButtons = document.querySelector('.cta-button').addEventListener('click', function() {
-    window.location.href = 'cuaca-pertanian.html';
-});
+    const readNowButtons = document.querySelectorAll('.cta-button');
+    readNowButtons.forEach(button => {
         button.addEventListener('click', (e) => {
             const href = button.getAttribute('href');
             if (href) {
@@ -58,8 +57,8 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    // Optional: Filter articles by category (if implemented in HTML with data-category)
-    const filterButtons = document.querySelectorAll('.category-filter');
+    // Filter articles by category
+    const filterButtons = document.querySelectorAll('.category-card[data-filter]');
     if (filterButtons.length > 0) {
         filterButtons.forEach(button => {
             button.addEventListener('click', () => {
