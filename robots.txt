@@ -1,3 +1,4 @@
 User-agent: *
 Allow: /
+
 Sitemap: https://vinnesiaaa.github.io/Vin/sitemap.xml
