@@ -8,6 +8,7 @@ body {
     font-family: 'Roboto', sans-serif;
     line-height: 1.6;
     color: #333;
+    background: #FFFFFF;
 }
 
 .container {
@@ -17,7 +18,7 @@ body {
 }
 
 header {
-    background: #f4f4f4;
+    background: #F4F4F4;
     padding: 1rem 0;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     position: sticky;
@@ -34,13 +35,14 @@ header .logo {
 }
 
 header .cta-small {
-    background: #007bff;
+    background: #007BFF;
     color: #fff;
     padding: 0.5rem 1rem;
     text-decoration: none;
     border-radius: 5px;
     font-size: 0.9rem;
     margin-left: 1rem;
+    transition: background 0.3s;
 }
 
 header .cta-small:hover {
@@ -65,7 +67,7 @@ nav ul li a {
 }
 
 nav ul li a:hover {
-    color: #007bff;
+    color: #007BFF;
 }
 
 .hero {
@@ -74,6 +76,7 @@ nav ul li a:hover {
     text-align: center;
     padding: 4rem 0;
     position: relative;
+    max-height: 400px;
 }
 
 .hero::before {
@@ -88,19 +91,19 @@ nav ul li a:hover {
 
 .hero h2 {
     font-family: 'Playfair Display', serif;
-    font-size: 2.5rem;
+    font-size: 32px;
     margin-bottom: 1rem;
     position: relative;
 }
 
 .hero p {
-    font-size: 1.2rem;
+    font-size: 16px;
     margin-bottom: 1.5rem;
     position: relative;
 }
 
 .hero .cta-button {
-    background: #007bff;
+    background: #007BFF;
     color: #fff;
     padding: 0.8rem 1.5rem;
     text-decoration: none;
@@ -113,30 +116,38 @@ nav ul li a:hover {
     background: #0056b3;
 }
 
-#kategori ul {
-    list-style: none;
-    display: flex;
-    gap: 1rem;
-    justify-content: center;
+#kategori {
     margin: 2rem 0;
 }
 
-#kategori ul li {
+#kategori h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 24px;
+    text-align: center;
+    margin-bottom: 1.5rem;
+}
+
+.category-grid {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.category-card {
     background: #fff;
     border: 1px solid #e9ecef;
     padding: 0.8rem 1.5rem;
     border-radius: 5px;
-    transition: background 0.3s;
-}
-
-#kategori ul li:hover {
-    background: #e9ecef;
-}
-
-#kategori ul li a {
     text-decoration: none;
-    color: #007bff;
-    font-size: 1rem;
+    color: #007BFF;
+    font-size: 16px;
+    transition: all 0.3s;
+}
+
+.category-card:hover {
+    background: #e9ecef;
+    transform: scale(1.05);
 }
 
 .blog-posts {
@@ -144,7 +155,8 @@ nav ul li a:hover {
 }
 
 .blog-posts h2 {
-    font-size: 1.8rem;
+    font-family: 'Playfair Display', serif;
+    font-size: 24px;
     margin-bottom: 1.5rem;
     text-align: center;
 }
@@ -161,7 +173,7 @@ nav ul li a:hover {
     border-radius: 5px;
     padding: 1rem;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s, opacity 0.3s;
+    transition: transform 0.3s;
     opacity: 0;
     transform: translateY(20px);
 }
@@ -178,12 +190,17 @@ nav ul li a:hover {
 }
 
 .blog-posts article h3 {
-    font-size: 1.5rem;
+    font-size: 20px;
     margin: 0.5rem 0;
 }
 
+.blog-posts article h3 a {
+    text-decoration: none;
+    color: #333;
+}
+
 .blog-posts article p {
-    font-size: 1rem;
+    font-size: 16px;
     color: #666;
 }
 
@@ -199,6 +216,7 @@ nav ul li a:hover {
     text-decoration: none;
     border-radius: 5px;
     font-size: 0.9rem;
+    transition: background 0.3s;
 }
 
 .share-buttons a.whatsapp { background: #25D366; }
@@ -208,6 +226,10 @@ nav ul li a:hover {
 .share-buttons a.linkedin { background: #0077B5; }
 .share-buttons a.telegram { background: #0088cc; }
 
+.share-buttons a:hover {
+    opacity: 0.9;
+}
+
 article .article-img {
     width: 100%;
     height: 300px;
@@ -216,12 +238,20 @@ article .article-img {
     margin-bottom: 1rem;
 }
 
+.blog-posts .cta-button {
+    display: block;
+    margin: 1.5rem auto;
+    text-align: center;
+    width: fit-content;
+}
+
 footer {
     background: #333;
     color: #fff;
     text-align: center;
     padding: 2rem 0;
     margin-top: 2rem;
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
 }
 
 footer a {
@@ -235,7 +265,7 @@ footer .newsletter {
 }
 
 footer .newsletter h3 {
-    font-size: 1.2rem;
+    font-size: 20px;
     margin-bottom: 1rem;
 }
 
@@ -254,11 +284,12 @@ footer .newsletter input {
 
 footer .newsletter button {
     padding: 0.5rem 1rem;
-    background: #007bff;
+    background: #007BFF;
     color: #fff;
     border: none;
     border-radius: 5px;
     cursor: pointer;
+    transition: background 0.3s;
 }
 
 footer .newsletter button:hover {
@@ -281,7 +312,7 @@ footer .newsletter button:hover {
     nav ul {
         display: none;
         flex-direction: column;
-        background: #f4f4f4;
+        background: #F4F4F4;
         padding: 1rem;
     }
 
@@ -307,19 +338,20 @@ footer .newsletter button:hover {
 
     .hero {
         padding: 2rem 0;
+        max-height: 300px;
     }
 
     .hero h2 {
-        font-size: 1.8rem;
+        font-size: 24px;
     }
 
     .hero p {
-        font-size: 1rem;
+        font-size: 14px;
     }
 
-    #kategori ul {
+    .category-grid {
         flex-direction: column;
-        text-align: center;
+        align-items: center;
     }
 
     .share-buttons a {
