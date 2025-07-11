@@ -30,6 +30,21 @@ header .logo {
     font-family: 'Playfair Display', serif;
     font-size: 2rem;
     color: #333;
+    text-decoration: none;
+}
+
+header .cta-small {
+    background: #007bff;
+    color: #fff;
+    padding: 0.5rem 1rem;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 0.9rem;
+    margin-left: 1rem;
+}
+
+header .cta-small:hover {
+    background: #0056b3;
 }
 
 nav ul {
