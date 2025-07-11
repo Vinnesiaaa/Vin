@@ -1,3 +1,6 @@
+/* Vin Nesia Stylesheet */
+/* Last Updated: 2025-07-12T05:44:00+07:00 */
+
 * {
     margin: 0;
     padding: 0;
@@ -6,39 +9,41 @@
 
 body {
     font-family: 'Roboto', sans-serif;
-    background-color: #f0f4f8; /* Latar belakang utama cerah */
-    color: #2c3e50; /* Teks utama kontras */
+    background: linear-gradient(135deg, #f0f4f8 0%, #e0e8f0 100%); /* Gradient keren untuk latar */
+    color: #2c3e50;
     line-height: 1.6;
 }
 
 header {
-    background-color: #2c3e50;
+    background: linear-gradient(90deg, #2c3e50 0%, #34495e 100%); /* Gradient untuk header */
     color: #ffffff;
     padding: 15px 0;
     position: fixed;
     width: 100%;
     top: 0;
     z-index: 1000;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
 }
 
 header .container {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
 }
 
 .logo {
     font-family: 'Playfair Display', serif;
     font-size: 1.5em;
-    margin-left: 20px;
+    margin-left: 10px;
 }
 
 .nav-toggle {
-    font-size: 1.5em;
+    font-size: 1.8em;
     cursor: pointer;
-    display: none;
-    margin-right: 20px;
+    margin-right: 20px; /* Dipindahkan sedikit ke pinggir */
 }
 
 nav ul {
@@ -62,9 +67,15 @@ nav ul li a:hover {
 }
 
 .cta-small {
-    background-color: #e74c3c;
+    background: linear-gradient(45deg, #e74c3c, #c0392b);
     padding: 5px 10px;
     border-radius: 5px;
+    color: #fff;
+    text-decoration: none;
+}
+
+.cta-small:hover {
+    background: linear-gradient(45deg, #c0392b, #a93226);
 }
 
 main {
@@ -74,37 +85,42 @@ main {
 
 .hero {
     text-align: center;
-    padding: 40px 20px;
-    background-color: #3498db;
+    padding: 50px 20px;
+    background: linear-gradient(135deg, #3498db 0%, #2980b9 100%); /* Gradient keren untuk hero */
     color: #ffffff;
-    border-radius: 8px;
-    margin-bottom: 20px;
+    border-radius: 10px;
+    margin-bottom: 30px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
 }
 
 .hero h2 {
     font-family: 'Playfair Display', serif;
     font-size: 2.5em;
-    margin-bottom: 10px;
+    margin-bottom: 15px;
     animation: slide 1s ease-out;
 }
 
 .hero p {
     font-size: 1.2em;
-    margin-bottom: 20px;
+    margin-bottom: 25px;
+    animation: fadeIn 1s ease-in;
 }
 
 .cta {
     display: inline-block;
-    background-color: #e74c3c;
+    background: linear-gradient(45deg, #e74c3c, #c0392b); /* Gradient untuk tombol */
     color: #ffffff;
-    padding: 10px 20px;
+    padding: 12px 25px;
     text-decoration: none;
-    border-radius: 5px;
-    transition: background-color 0.3s;
+    border-radius: 25px; /* Membuat tombol lebih bulat dan modern */
+    font-weight: bold;
+    transition: transform 0.3s, background 0.3s;
+    box-shadow: 0 2px 10px rgba(231, 76, 60, 0.5);
 }
 
 .cta:hover {
-    background-color: #c0392b;
+    background: linear-gradient(45deg, #c0392b, #a93226);
+    transform: scale(1.05); /* Efek zoom saat hover */
 }
 
 #artikel-terbaru, #kategori {
@@ -127,14 +143,14 @@ main {
 }
 
 article {
-    background-color: #ffffff; /* Latar belakang artikel putih */
+    background: linear-gradient(135deg, #ffffff 0%, #f9f9f9 100%); /* Gradient halus untuk artikel */
     padding: 20px;
     margin-bottom: 20px;
-    border-radius: 8px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    color: #333333; /* Teks artikel hitam untuk kontras maksimal */
-    opacity: 1; /* Pastikan tidak transparan */
-    visibility: visible; /* Pastikan tidak tersembunyi */
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    color: #333333;
+    opacity: 1;
+    visibility: visible;
 }
 
 article img {
@@ -161,7 +177,7 @@ article h3 a:hover {
 
 article p {
     font-size: 1em;
-    color: #333333; /* Pastikan paragraf terlihat */
+    color: #333333;
     margin-bottom: 10px;
 }
 
@@ -171,22 +187,23 @@ article p {
 }
 
 .category-btn {
-    background-color: #3498db;
+    background: linear-gradient(45deg, #3498db, #2980b9);
     color: #ffffff;
     border: none;
     padding: 8px 15px;
     margin: 0 5px;
-    border-radius: 5px;
+    border-radius: 20px;
     cursor: pointer;
-    transition: background-color 0.3s;
+    transition: background 0.3s, transform 0.3s;
 }
 
 .category-btn.active, .category-btn:hover {
-    background-color: #2980b9;
+    background: linear-gradient(45deg, #2980b9, #1f6b8d);
+    transform: scale(1.05);
 }
 
 footer {
-    background-color: #2c3e50;
+    background: linear-gradient(90deg, #2c3e50 0%, #34495e 100%);
     color: #ffffff;
     padding: 20px 0;
     text-align: center;
@@ -220,20 +237,22 @@ footer a:hover {
     padding: 8px;
     border: none;
     border-radius: 5px;
+    background: #ffffff;
 }
 
 .newsletter button {
-    background-color: #e74c3c;
+    background: linear-gradient(45deg, #e74c3c, #c0392b);
     color: #ffffff;
     border: none;
     padding: 8px 15px;
-    border-radius: 5px;
+    border-radius: 20px;
     cursor: pointer;
-    transition: background-color 0.3s;
+    transition: background 0.3s, transform 0.3s;
 }
 
 .newsletter button:hover {
-    background-color: #c0392b;
+    background: linear-gradient(45deg, #c0392b, #a93226);
+    transform: scale(1.05);
 }
 
 .share-buttons a {
@@ -286,9 +305,28 @@ footer a:hover {
 }
 
 /* Responsiveness */
+@media (max-width: 1200px) {
+    .container {
+        padding: 0 15px;
+    }
+}
+
+@media (max-width: 1024px) {
+    .hero h2 {
+        font-size: 2.2em;
+    }
+    .hero p {
+        font-size: 1.1em;
+    }
+    .cta {
+        padding: 10px 20px;
+    }
+}
+
 @media (max-width: 768px) {
     .nav-toggle {
         display: block;
+        margin-right: 15px; /* Lebih ke pinggir di mobile */
     }
 
     nav ul {
@@ -297,7 +335,7 @@ footer a:hover {
         top: 60px;
         left: 0;
         width: 100%;
-        background-color: #2c3e50;
+        background: linear-gradient(90deg, #2c3e50 0%, #34495e 100%);
         flex-direction: column;
         padding: 10px 0;
     }
@@ -312,7 +350,7 @@ footer a:hover {
     }
 
     .hero h2 {
-        font-size: 2em;
+        font-size: 1.8em;
     }
 
     .hero p {
@@ -330,5 +368,20 @@ footer a:hover {
     .category-btn {
         padding: 6px 12px;
         margin: 0 3px;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero h2 {
+        font-size: 1.5em;
+    }
+    .hero p {
+        font-size: 0.9em;
+    }
+    .cta {
+        padding: 8px 15px;
+    }
+    article h3 {
+        font-size: 1em;
     }
 }
