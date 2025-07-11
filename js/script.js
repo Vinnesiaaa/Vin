@@ -1,7 +1,7 @@
 document.addEventListener('DOMContentLoaded', () => {
-    console.log('Vin Nesia Blog Loaded');
+    console.log('Vin Nesia Blog Loaded - Updated 2025-07-12 03:43 WIB');
 
-    // Hamburger menu toggle
+    // Hamburger menu toggle with adjusted positioning awareness
     const navToggle = document.querySelector('.nav-toggle');
     const navMenu = document.querySelector('nav ul');
     if (navToggle && navMenu) {
@@ -28,5 +28,50 @@ document.addEventListener('DOMContentLoaded', () => {
     // Auto-scroll to top if hash is detected
     if (window.location.hash) {
         window.scrollTo(0, 0);
+    }
+
+    // Handle "Baca Sekarang" button click to ensure navigation
+    const readNowButtons = document.querySelectorAll('.cta-button');
+    readNowButtons.forEach(button => {
+        button.addEventListener('click', (e) => {
+            const href = button.getAttribute('href');
+            if (href) {
+                // Check if the file exists before navigating
+                fetch(href)
+                    .then(response => {
+                        if (response.ok) {
+                            window.location.href = href;
+                        } else {
+                            console.error(`File ${href} not found. Check your path or upload the file.`);
+                            alert('Artikel belum tersedia. Silakan cek kembali nanti!');
+                        }
+                    })
+                    .catch(error => {
+                        console.error('Error fetching article:', error);
+                        alert('Terjadi kesalahan. Silakan coba lagi!');
+                    });
+            } else {
+                console.error('No href attribute found on button');
+                alert('Tautan artikel belum diatur!');
+            }
+        });
+    });
+
+    // Optional: Filter articles by category (if implemented in HTML with data-category)
+    const filterButtons = document.querySelectorAll('.category-filter');
+    if (filterButtons.length > 0) {
+        filterButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                const category = button.getAttribute('data-filter');
+                articles.forEach(article => {
+                    const articleCategory = article.getAttribute('data-category');
+                    if (category === 'all' || articleCategory === category) {
+                        article.style.display = 'block';
+                    } else {
+                        article.style.display = 'none';
+                    }
+                });
+            });
+        });
     }
 });
