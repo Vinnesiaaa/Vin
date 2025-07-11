@@ -31,8 +31,9 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     // Handle "Baca Sekarang" button click to ensure navigation
-    const readNowButtons = document.querySelectorAll('.cta-button');
-    readNowButtons.forEach(button => {
+    const readNowButtons = document.querySelector('.cta-button').addEventListener('click', function() {
+    window.location.href = 'cuaca-pertanian.html';
+});
         button.addEventListener('click', (e) => {
             const href = button.getAttribute('href');
             if (href) {
