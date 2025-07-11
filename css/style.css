@@ -1,3 +1,6 @@
+/* Vin Nesia Stylesheet */
+/* Last Updated: 2025-07-12T06:43:00+07:00 */
+
 * {
     margin: 0;
     padding: 0;
@@ -29,6 +32,7 @@ header .container {
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 20px;
+    position: relative; /* Kontekstual untuk posisi absolut */
 }
 
 .logo {
@@ -40,12 +44,14 @@ header .container {
 .nav-toggle {
     font-size: 1.8em;
     cursor: pointer;
-    padding: 5px 10px; /* Padding untuk klik lebih mudah */
-    position: absolute; /* Ubah ke posisi absolut untuk kontrol penuh */
-    right: 20px; /* Pindah ke pojok kanan */
-    top: 50%; /* Vertikal tengah */
-    transform: translateY(-50%); /* Sesuaikan posisi vertikal */
+    padding: 5px 10px;
+    position: fixed; /* Ubah ke fixed untuk pojok kanan atas */
+    right: 10px; /* Tepi kanan dengan padding kecil */
+    top: 15px; /* Sesuaikan dengan padding header */
+    z-index: 1001; /* Di atas header */
     display: none; /* Sembunyikan di desktop, tampil di mobile */
+    background: rgba(44, 62, 80, 0.9); /* Latar semi-transparan untuk profesional */
+    border-radius: 5px; /* Efek modern */
 }
 
 nav ul {
@@ -328,12 +334,10 @@ footer a:hover {
 @media (max-width: 768px) {
     .nav-toggle {
         display: block; /* Tampilkan di mobile */
-        position: absolute; /* Pastikan posisi absolut */
-        right: 20px; /* Pojok kanan */
-        top: 50%; /* Tengah vertikal */
-        transform: translateY(-50%); /* Penyesuaian vertikal */
-        padding: 5px 10px; /* Ruang klik */
-        z-index: 1001; /* Di atas elemen lain */
+        position: fixed; /* Tetap di pojok */
+        right: 10px; /* Tepi kanan */
+        top: 15px; /* Sesuai padding header */
+        z-index: 1001; /* Di atas semua */
     }
 
     nav ul {
