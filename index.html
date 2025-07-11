@@ -1,32 +1,116 @@
-document.addEventListener('DOMContentLoaded', () => {
-    console.log('Vin Nesia Blog Loaded');
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Vin Nesia - Blog terbaru tentang tips, cuaca, ekonomi, dan kesehatan mental di 2025. Jangan lewatkan insight eksklusif!">
+    <meta name="keywords" content="tips sehari-hari, musim kemarau BMKG, cuaca pertanian, kebijakan ekonomi, tekanan global, migrasi mental, Vin Nesia">
+    <meta name="author" content="Vin Nesia">
+    <meta name="last-modified" content="2025-07-12T03:07:00+07:00">
+    <title>Vin Nesia - Insight Terpanas 2025 yang Wajib Kamu Baca Sekarang!</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&family=Roboto&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-ZPZRMB6EN8"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-ZPZRMB6EN8');
+    </script>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1 class="logo">Vin Nesia</h1>
+            <span class="nav-toggle">☰</span>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">Tentang Saya</a></li>
+                    <li><a href="#kategori">Kategori</a></li>
+                    <li><a href="privacy-policy.html">Privacy Policy</a></li>
+                    <li><a href="terms.html">Terms</a></li>
+                    <li><a href="https://instagram.com/vin.nesia.id" class="cta-small">Ikuti di Instagram</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
 
-    // Hamburger menu toggle
-    const navToggle = document.querySelector('.nav-toggle');
-    const navMenu = document.querySelector('nav ul');
-    if (navToggle && navMenu) {
-        navToggle.addEventListener('click', () => {
-            navMenu.classList.toggle('active');
-        });
-    }
+    <main class="container">
+        <section class="hero">
+            <h2>Jangan Lewatkan Insight Terbaru 2025!</h2>
+            <p>Dari cuaca hingga kesehatan mental, temukan tips dan tren terkini yang mengubah hidupmu sekarang.</p>
+            <a href="bmkg-kemarau.html" class="cta-button animate-pulse">Baca Sekarang</a>
+        </section>
 
-    // Trigger animations
-    const animateElements = document.querySelectorAll('.animate-fade, .animate-slide, .animate-pulse');
-    animateElements.forEach(element => {
-        element.style.animationPlayState = 'running';
-    });
+        <section id="kategori">
+            <h2 class="animate-slide">Kategori</h2>
+            <p class="category-desc">Pilih topik favorit Anda sebelum semua orang tahu!</p>
+            <div class="category-grid">
+                <a href="#" class="category-card animate-fade"><i class="fas fa-home"></i> Lifestyle</a>
+                <a href="#" class="category-card animate-fade"><i class="fas fa-chart-line"></i> Produktivitas</a>
+                <a href="#" class="category-card animate-fade"><i class="fas fa-laptop"></i> Teknologi</a>
+                <a href="#" class="category-card animate-fade"><i class="fas fa-heartbeat"></i> Kesehatan</a>
+                <a href="#" class="category-card animate-fade"><i class="fas fa-leaf"></i> Lingkungan</a>
+            </div>
+        </section>
 
-    // Fade-in animation for articles
-    const articles = document.querySelectorAll('.blog-posts article');
-    articles.forEach((article, index) => {
-        setTimeout(() => {
-            article.style.opacity = '1';
-            article.style.transform = 'translateY(0)';
-        }, index * 200);
-    });
+        <section class="blog-posts">
+            <h2 class="animate-slide">Artikel Terbaru</h2>
+            <div class="grid">
+                <article class="animate-fade">
+                    <img src="assets/images/bmkg.jpg" alt="BMKG Musim Kemarau">
+                    <h3><a href="bmkg-kemarau.html">BMKG Merevisi Musim Kemarau: Insight & Dampak yang Harus Kamu Tahu!</a></h3>
+                    <p>Pelajari dampak revisi musim kemarau 2025 sebelum terlambat.</p>
+                </article>
+                <article class="animate-fade">
+                    <img src="assets/images/productivity.jpg" alt="Tips Produktivitas">
+                    <h3><a href="blog-post.html">Tips & Trik Produktivitas 2025 yang Akan Mengubah Hidupmu!</a></h3>
+                    <p>Tingkatkan produktivitas dengan trik terbaru sekarang juga.</p>
+                </article>
+                <article class="animate-fade">
+                    <img src="assets/images/cuaca-pertanian.jpg" alt="Cuaca & Pertanian">
+                    <h3><a href="cuaca-pertanian.html">Cuaca Ekstrem 2025: Rahasia Sukses Pertanian Sebelum Semua Petani Tahu!</a></h3>
+                    <p>Jangan lewatkan strategi bertani di tengah cuaca tak terduga.</p>
+                </article>
+                <article class="animate-fade">
+                    <img src="assets/images/kebijakan-ekonomi.jpg" alt="Kebijakan Ekonomi">
+                    <h3><a href="kebijakan-ekonomi.html">Kebijakan Ekonomi 2025: Peluang Besar yang Wajib Kamu Manfaatkan Sekarang!</a></h3>
+                    <p>Ikuti tren ekonomi sebelum pesaingmu mengambil alih.</p>
+                </article>
+                <article class="animate-fade">
+                    <img src="assets/images/tekanan-global.jpg" alt="Tekanan Global">
+                    <h3><a href="tekanan-global.html">Tekanan Global 2025: Ancaman Besar yang Harus Kamu Hadapi Sekarang!</a></h3>
+                    <p>Pahami tantangan dunia sebelum terlambat bertindak.</p>
+                </article>
+                <article class="animate-fade">
+                    <img src="assets/images/migrasi-mental.jpg" alt="Migrasi Mental">
+                    <h3><a href="migrasi-mental.html">Migrasi Mental: Tren Kesehatan Jiwa 2025 yang Harus Kamu Ikuti!</a></h3>
+                    <p>Jaga kesehatan mentalmu sebelum semua orang sadar pentingnya.</p>
+                </article>
+            </div>
+            <a href="#" class="cta-button animate-pulse">Lihat Semua Artikel</a>
+        </section>
+    </main>
 
-    // Auto-scroll to top if hash is detected
-    if (window.location.hash) {
-        window.scrollTo(0, 0);
-    }
-});
+    <footer>
+        <div class="container">
+            <p>© 2025 Vin Nesia. All rights reserved. Last updated: 2025-07-12 03:07 WIB.</p>
+            <p>
+                <a href="https://github.com/Vinnesiaaa/Vin" target="_blank">GitHub</a> |
+                <a href="mailto:vinn.nesiaa.id@gmail.com">Email</a> |
+                <a href="https://instagram.com/vin.nesia.id" target="_blank">Instagram</a>
+            </p>
+            <div class="newsletter">
+                <h3>Berlangganan Newsletter</h3>
+                <form action="https://formspree.io/f/xnnvevpd" method="POST">
+                    <input type="email" name="email" placeholder="Masukkan email Anda" required>
+                    <button type="submit" class="animate-pulse">Berlangganan</button>
+                </form>
+            </div>
+        </div>
+    </footer>
+    <script src="js/script.js"></script>
+</body>
+</html>
