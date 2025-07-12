@@ -33,11 +33,23 @@ document.querySelector('.newsletter form').addEventListener('submit', function(e
     }
 });
 
-// Animasi sederhana untuk tombol berlangganan (opsional)
+// Animasi sederhana untuk tombol berlangganan
 const subscribeButton = document.querySelector('.newsletter button');
-subscribeButton.addEventListener('mouseover', function() {
-    this.style.transform = 'scale(1.1)';
-});
-subscribeButton.addEventListener('mouseout', function() {
-    this.style.transform = 'scale(1)';
+if (subscribeButton) {
+    subscribeButton.addEventListener('mouseover', function() {
+        this.style.transform = 'scale(1.1)';
+    });
+    subscribeButton.addEventListener('mouseout', function() {
+        this.style.transform = 'scale(1)';
+    });
+}
+
+// Scroll smooth ke kategori
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function(e) {
+        e.preventDefault();
+        document.querySelector(this.getAttribute('href')).scrollIntoView({
+            behavior: 'smooth'
+        });
+    });
 });
