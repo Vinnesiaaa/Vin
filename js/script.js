@@ -36,7 +36,8 @@ function filterCategory() {
                 { cat: 'teknologi', href: 'tekanan-global.html' },
                 { cat: 'kesehatan-jiwa', href: 'migrasi-mental.html' },
                 { cat: 'produktivitas', href: 'blog-post.html' },
-                { cat: 'bisnis-online', href: 'cara-cepat-dapat-cuan-jadi-affiliate-tiktok.html' }
+                { cat: 'bisnis-online', href: 'cara-cepat-dapat-cuan-jadi-affiliate-tiktok.html' },
+                { cat: 'sepak-bola', href: 'jepang-vs-china-eaff-e-1-2025.html' }
             ].some(match => match.cat === category && href.includes(match.href));
             item.style.display = matches ? 'block' : 'none';
         });
@@ -50,4 +51,16 @@ function redirectCategory(select) {
     }
 }
 
+// Fungsi untuk pencarian artikel
+function searchArticles() {
+    const input = document.getElementById('search-input').value.toLowerCase();
+    const articles = document.querySelectorAll('.berita-item h3 a');
+    articles.forEach(article => {
+        const text = article.textContent.toLowerCase();
+        const item = article.closest('.berita-item');
+        item.style.display = text.includes(input) ? 'block' : 'none';
+    });
+}
+
+// Jalankan filter kategori saat halaman dimuat
 window.onload = filterCategory;
