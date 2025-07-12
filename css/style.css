@@ -9,7 +9,7 @@ body {
     font-family: 'Roboto', sans-serif;
     line-height: 1.6;
     color: #333;
-    background-color: #fff;
+    background-color: #f8f9fa;
 }
 
 .container {
@@ -20,18 +20,21 @@ body {
 
 /* Header Styles */
 header {
-    background-color: #f4f4f4;
-    padding: 10px 0;
+    background-color: #ffffff;
+    padding: 15px 0;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
     position: sticky;
     top: 0;
     z-index: 1000;
+    transition: all 0.3s ease;
 }
 
 .logo {
     font-family: 'Playfair Display', serif;
-    font-size: 24px;
+    font-size: 28px;
     color: #2c3e50;
     margin-left: 15px;
+    font-weight: 700;
 }
 
 .nav-toggle {
@@ -39,6 +42,7 @@ header {
     cursor: pointer;
     display: none;
     margin-right: 15px;
+    color: #2c3e50;
 }
 
 nav ul {
@@ -51,22 +55,29 @@ nav ul {
 nav ul li a {
     text-decoration: none;
     color: #2c3e50;
-    font-weight: bold;
-    padding: 5px 10px;
-    transition: color 0.3s;
+    font-weight: 500;
+    padding: 8px 15px;
+    transition: color 0.3s ease, background-color 0.3s ease;
 }
 
 nav ul li a:hover {
     color: #e74c3c;
+    background-color: #f1f1f1;
+    border-radius: 5px;
 }
 
 .cta-small {
     background-color: #e74c3c;
     color: white;
-    padding: 5px 10px;
+    padding: 6px 12px;
     border-radius: 5px;
     text-decoration: none;
     font-size: 14px;
+    transition: background-color 0.3s ease;
+}
+
+.cta-small:hover {
+    background-color: #c0392b;
 }
 
 @media (max-width: 768px) {
@@ -76,11 +87,12 @@ nav ul li a:hover {
     nav {
         display: none;
         position: absolute;
-        top: 50px;
+        top: 60px;
         left: 0;
         width: 100%;
-        background-color: #f4f4f4;
-        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        background-color: #ffffff;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        border-top: 1px solid #ddd;
     }
     nav.active {
         display: block;
@@ -90,75 +102,98 @@ nav ul li a:hover {
         text-align: center;
     }
     nav ul li {
-        padding: 10px 0;
-        border-bottom: 1px solid #ddd;
+        padding: 12px 0;
+        border-bottom: 1px solid #eee;
     }
     nav ul li:last-child {
         border-bottom: none;
     }
     nav ul li a {
         font-size: 16px;
+        display: block;
     }
     .cta-small {
         font-size: 12px;
-        padding: 4px 8px;
+        padding: 4px 10px;
     }
 }
 
 /* Main Content Styles */
 #hero {
     text-align: center;
-    padding: 30px 0;
-    background-color: #ecf0f1;
-    margin-bottom: 20px;
+    padding: 40px 0;
+    background: linear-gradient(135deg, #ecf0f1, #ffffff);
+    margin-bottom: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
 }
 
 #hero h2 {
     font-family: 'Playfair Display', serif;
-    font-size: 28px;
-    margin-bottom: 10px;
+    font-size: 32px;
+    margin-bottom: 15px;
+    color: #2c3e50;
 }
 
 #hero p {
     font-size: 16px;
-    margin-bottom: 15px;
+    margin-bottom: 20px;
+    color: #7f8c8d;
 }
 
 .cta {
     display: inline-block;
     background-color: #e74c3c;
     color: white;
-    padding: 8px 15px;
+    padding: 10px 20px;
     text-decoration: none;
     border-radius: 5px;
-    font-size: 14px;
-    transition: background-color 0.3s;
+    font-size: 16px;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 5px rgba(231, 76, 60, 0.3);
 }
 
 .cta:hover {
     background-color: #c0392b;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 10px rgba(231, 76, 60, 0.4);
 }
 
 #berita {
-    margin-bottom: 20px;
+    margin-bottom: 30px;
 }
 
 #berita h2 {
     font-family: 'Playfair Display', serif;
-    font-size: 24px;
-    margin-bottom: 15px;
+    font-size: 28px;
+    margin-bottom: 20px;
     text-align: center;
+    color: #2c3e50;
+}
+
+.berita-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
 }
 
 .berita-item {
-    margin-bottom: 20px;
+    background-color: #ffffff;
+    border-radius: 10px;
     overflow: hidden;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.berita-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
 }
 
 .berita-item img {
     max-width: 100%;
     height: auto;
-    border-radius: 5px;
+    border-radius: 10px 10px 0 0;
     max-height: 300px;
     object-fit: cover;
     display: block;
@@ -167,27 +202,39 @@ nav ul li a:hover {
 
 .berita-item h3 {
     font-size: 18px;
-    margin: 10px 0;
+    margin: 15px 0;
     text-align: center;
+    padding: 0 10px;
 }
 
 .berita-item h3 a {
     text-decoration: none;
     color: #2c3e50;
+    transition: color 0.3s ease;
+}
+
+.berita-item h3 a:hover {
+    color: #e74c3c;
 }
 
 .berita-item p {
     font-size: 14px;
     color: #7f8c8d;
     text-align: center;
-    padding: 0 10px;
+    padding: 0 10px 15px;
 }
 
 article {
-    padding: 20px;
-    background-color: #f9f9f9;
-    border-radius: 5px;
+    padding: 25px;
+    background-color: #ffffff;
+    border-radius: 10px;
     margin-bottom: 20px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+    transition: box-shadow 0.3s ease;
+}
+
+article:hover {
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
 }
 
 article img {
@@ -196,92 +243,109 @@ article img {
     border-radius: 5px;
     max-height: 300px;
     object-fit: cover;
-    margin-bottom: 15px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
 article h1 {
     font-family: 'Playfair Display', serif;
     font-size: 28px;
-    margin-bottom: 10px;
+    margin-bottom: 15px;
     color: #2c3e50;
 }
 
 article h2 {
     font-size: 22px;
-    margin: 15px 0;
+    margin: 20px 0;
     color: #34495e;
 }
 
 article p {
     font-size: 16px;
-    margin-bottom: 15px;
+    margin-bottom: 20px;
     line-height: 1.8;
+    color: #666;
 }
 
 .breadcrumb {
     font-size: 14px;
-    margin-bottom: 15px;
+    margin-bottom: 20px;
     color: #7f8c8d;
+    font-style: italic;
 }
 
 .breadcrumb a {
     color: #e74c3c;
     text-decoration: none;
+    transition: color 0.3s ease;
 }
 
 .breadcrumb a:hover {
+    color: #c0392b;
     text-decoration: underline;
 }
 
 #kategori {
-    background-color: #f9f9f9;
-    padding: 20px;
-    border-radius: 5px;
-    margin-bottom: 20px;
+    background-color: #ffffff;
+    padding: 25px;
+    border-radius: 10px;
+    margin-bottom: 30px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
 }
 
 #kategori h2 {
     font-family: 'Playfair Display', serif;
-    font-size: 24px;
-    margin-bottom: 15px;
+    font-size: 28px;
+    margin-bottom: 20px;
+    text-align: center;
+    color: #2c3e50;
+}
+
+.category-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 15px;
+    justify-items: center;
+}
+
+.category-card {
+    display: inline-block;
+    background-color: #e74c3c;
+    color: white;
+    padding: 12px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 5px rgba(231, 76, 60, 0.3);
     text-align: center;
 }
 
-#kategori ul {
-    list-style: none;
-    display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
-}
-
-#kategori ul li {
-    margin: 5px 0;
-}
-
-#kategori ul li a {
-    text-decoration: none;
-    color: #e74c3c;
-    font-weight: bold;
-    font-size: 14px;
-    padding: 5px 10px;
-}
-
-#kategori ul li a:hover {
-    color: #c0392b;
+.category-card:hover {
+    background-color: #c0392b;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 10px rgba(231, 76, 60, 0.4);
 }
 
 .tags {
-    margin-top: 10px;
+    margin-top: 15px;
     text-align: center;
 }
 
 .tags span {
     background-color: #e74c3c;
     color: white;
-    padding: 5px 10px;
+    padding: 6px 12px;
     border-radius: 5px;
     margin: 0 5px;
     font-size: 12px;
+    transition: all 0.3s ease;
+}
+
+.tags span:hover {
+    background-color: #c0392b;
+    transform: scale(1.05);
 }
 
 /* Optimasi untuk HP */
@@ -302,6 +366,9 @@ article p {
     #berita h2 {
         font-size: 20px;
     }
+    .berita-grid {
+        grid-template-columns: 1fr;
+    }
     .berita-item img {
         max-height: 180px;
     }
@@ -314,15 +381,15 @@ article p {
     #kategori h2 {
         font-size: 20px;
     }
-    #kategori ul {
-        flex-direction: column;
-        align-items: center;
+    .category-grid {
+        grid-template-columns: 1fr;
     }
-    #kategori ul li {
-        margin: 8px 0;
+    .category-card {
+        font-size: 14px;
+        padding: 8px 15px;
     }
     article {
-        padding: 10px;
+        padding: 15px;
     }
     article img {
         max-height: 200px;
@@ -352,8 +419,9 @@ footer {
     background-color: #2c3e50;
     color: white;
     text-align: center;
-    padding: 15px 0;
-    margin-top: 20px;
+    padding: 20px 0;
+    margin-top: 30px;
+    box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.1);
 }
 
 footer p {
@@ -364,8 +432,9 @@ footer p {
 footer a {
     color: #e74c3c;
     text-decoration: none;
-    margin: 0 8px;
+    margin: 0 10px;
     font-size: 12px;
+    transition: color 0.3s ease;
 }
 
 footer a:hover {
@@ -373,32 +442,37 @@ footer a:hover {
 }
 
 .newsletter h3 {
-    margin-bottom: 10px;
-    font-size: 14px;
+    margin-bottom: 15px;
+    font-size: 16px;
+    color: #ecf0f1;
 }
 
 .newsletter input {
-    padding: 5px;
-    margin-right: 5px;
+    padding: 8px;
+    margin-right: 10px;
     border: none;
-    border-radius: 3px;
-    font-size: 12px;
+    border-radius: 5px;
+    font-size: 14px;
     width: 60%;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
 .newsletter button {
-    padding: 5px 8px;
+    padding: 8px 15px;
     background-color: #e74c3c;
     color: white;
     border: none;
-    border-radius: 3px;
+    border-radius: 5px;
     cursor: pointer;
-    font-size: 12px;
-    transition: transform 0.3s;
+    font-size: 14px;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 5px rgba(231, 76, 60, 0.3);
 }
 
 .newsletter button:hover {
     transform: scale(1.05);
+    background-color: #c0392b;
+    box-shadow: 0 4px 10px rgba(231, 76, 60, 0.4);
 }
 
 .animate-pulse {
