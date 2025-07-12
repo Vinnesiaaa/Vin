@@ -17,46 +17,16 @@ Vin/ ├── index.html          # Halaman utama (beranda) ├── berita.ht
    ```bash
    git clone https://github.com/Vinnesiaaa/Vin.git
    cd Vin
-   Persyaratan:
-Web browser modern (Chrome, Firefox, Safari, dll.).
-Tidak perlu server lokal; buka index.html langsung di browser untuk pratinjau lokal.
-Pengembangan:
-Edit file HTML, CSS, atau JS sesuai kebutuhan.
-Tambahkan artikel baru di folder /articles/ dengan format yang sama (termasuk path gambar ../../assets/images/nama-file.jpg).
-Optimalkan gambar di /assets/images/ dengan dimensi 500x250px dan ukuran < 200KB.
-Penyebaran:
-Commit dan push perubahan ke GitHub:
-git add .
-git commit -m "Deskripsi perubahan"
-git push origin main
-Situs akan otomatis diperbarui di https://vinnesiaaa.github.io/Vin/.
-Fitur Utama
-Responsif: Desain yang dioptimalkan untuk desktop dan HP.
-Navigasi: Menu toggle untuk layar kecil dengan link ke Home, Tentang Saya, Kategori, Privacy Policy, dan Terms.
-Artikel: Konten mendalam dengan gambar dan breadcrumb.
-Interaktivitas: Form newsletter dan animasi sederhana.
+   Persyaratan: Izin Dahulu
+Via Email : vinn.nesiaa.id@gmail.com
+Whatsapp : +62 895 3545 11777
+
+
 Kontribusi
 Kontribusi diterima! Silakan buka issue atau pull request di repositori ini. Untuk pertanyaan, hubungi:
 Email: vinn.nesiaa.id@gmail.com
 Instagram: @vin.nesia.id
 GitHub: @Vinnesiaaa
 Lisensi
-© 2025 Vin Nesia. Semua hak dilindungi. Konten bersifat informatif dan simulasi untuk tahun 2025.
-Catatan
-Pastikan semua gambar diunggah ke /assets/images/ untuk menghindari broken image.
-Periksa konsol (F12) jika ada error saat pengembangan.
-Pembaruan rutin akan dilakukan untuk menyesuaikan dengan tren 2025.
----
+© 2025 Vin Nesia. Semua hak dilindungi. Konten bersifat informatif dan fakta untuk tahun 2025.
 
-### **Instruksi Pengunggahan**
-1. **Salin dan Tempel**:
-   - Buka editor teks (Notepad, VS Code, dll.), tempel kode di atas, dan simpan sebagai `README.md` di root folder proyekmu (sama level dengan `index.html`).
-
-2. **Unggah**:
-   ```bash
-   git add README.md
-   git commit -m "Added complete README.md - 2025-07-12 14:04 WIB"
-   git push origin main
-Verifikasi:
-Buka https://github.com/Vinnesiaaa/Vin dan pastikan README.md muncul di halaman utama repositori.
-Cek apakah isi terlihat rapi (GitHub akan render Markdown secara otomatis).
