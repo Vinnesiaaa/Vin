@@ -43,4 +43,11 @@ function filterCategory() {
     }
 }
 
+// Redirect saat dropdown diubah
+function redirectCategory(select) {
+    if (select.value) {
+        window.location.href = select.value;
+    }
+}
+
 window.onload = filterCategory;
