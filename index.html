@@ -7,12 +7,55 @@
     <meta name="description" content="VIN NESIA - Berita viral, tips produktivitas, dan inspirasi terbaru 2025 dengan fitur search dan share sosial media.">
     <meta name="keywords" content="berita viral, tips produktivitas, inspirasi 2025, VIN NESIA, search bar, share sosial media, Jepang vs China, EAFF E-1 2025, cara cepat dapat cuan 2025">
     <meta name="author" content="Vin Nesia">
-    <meta name="last-modified" content="2025-07-12T23:20:00+07:00">
+    <meta name="last-modified" content="2025-07-13T00:49:00+07:00">
     <title>VIN NESIA - Berita & Inspirasi 2025 🌟</title>
     <link rel="stylesheet" href="css/style.css">
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"> <!-- Untuk ikon sosial media -->
+    <style>
+        /* CSS tambahan untuk slideshow */
+        .hero-slideshow {
+            max-width: 100%;
+            height: 300px;
+            overflow: hidden;
+            position: relative;
+            margin-bottom: 20px;
+        }
+        .hero-slide {
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            opacity: 0;
+            transition: opacity 1s ease-in-out;
+        }
+        .hero-slide.active {
+            opacity: 1;
+        }
+        .hero-slide img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 15px;
+        }
+        /* Efek glitter di logo */
+        .glitter-effect {
+            position: absolute;
+            width: 10px;
+            height: 10px;
+            background: rgba(255, 215, 0, 0.8);
+            border-radius: 50%;
+            animation: glitter 2s infinite;
+            pointer-events: none;
+        }
+        @keyframes glitter {
+            0% { transform: scale(0); opacity: 0; }
+            50% { transform: scale(1.5); opacity: 1; }
+            100% { transform: scale(0); opacity: 0; }
+        }
+    </style>
 </head>
 <body>
     <header>
@@ -21,6 +64,10 @@
                 <h1 class="logo">VIN NESIA</h1>
                 <span class="tagline">Inspirasi Terbaik 2025</span>
                 <span class="decorator"></span>
+                <!-- Efek glitter -->
+                <div class="glitter-effect" style="top: 10px; left: 20px;"></div>
+                <div class="glitter-effect" style="top: 30px; left: 50px; animation-delay: 0.5s;"></div>
+                <div class="glitter-effect" style="top: 20px; right: 20px; animation-delay: 1s;"></div>
             </div>
             <span class="nav-toggle">☰</span>
             <nav>
@@ -42,13 +89,13 @@
             <div class="category-wrapper">
                 <select class="category-dropdown" onchange="redirectCategory(this)">
                     <option value="" class="default-option">Pilih Kategori <span class="dropdown-icon">▼</span></option>
-                    <option value="berita.html?category=pertanian" class="category-option">Pertanian 🌾 <span class="dropdown-icon">🌱</span></option>
-                    <option value="berita.html?category=ekonomi" class="category-option">Ekonomi 💰 <span class="dropdown-icon">💸</span></option>
-                    <option value="berita.html?category=teknologi" class="category-option">Teknologi 💻 <span class="dropdown-icon">🔧</span></option>
-                    <option value="berita.html?category=kesehatan-jiwa" class="category-option">Kesehatan Jiwa 🧠 <span class="dropdown-icon">❤️</span></option>
-                    <option value="berita.html?category=produktivitas" class="category-option">Produktivitas ⏳ <span class="dropdown-icon">⏱️</span></option>
-                    <option value="berita.html?category=bisnis-online" class="category-option">Bisnis Online 📈 <span class="dropdown-icon">💻</span></option>
-                    <option value="berita.html?category=sepak-bola" class="category-option">Sepak Bola ⚽ <span class="dropdown-icon">🏆</span></option>
+                    <option value="index.html?category=pertanian" class="category-option">Pertanian 🌾 <span class="dropdown-icon">🌱</span></option>
+                    <option value="index.html?category=ekonomi" class="category-option">Ekonomi 💰 <span class="dropdown-icon">💸</span></option>
+                    <option value="index.html?category=teknologi" class="category-option">Teknologi 💻 <span class="dropdown-icon">🔧</span></option>
+                    <option value="index.html?category=kesehatan-jiwa" class="category-option">Kesehatan Jiwa 🧠 <span class="dropdown-icon">❤️</span></option>
+                    <option value="index.html?category=produktivitas" class="category-option">Produktivitas ⏳ <span class="dropdown-icon">⏱️</span></option>
+                    <option value="index.html?category=bisnis-online" class="category-option">Bisnis Online 📈 <span class="dropdown-icon">💻</span></option>
+                    <option value="index.html?category=sepak-bola" class="category-option">Sepak Bola ⚽ <span class="dropdown-icon">🏆</span></option>
                 </select>
             </div>
         </section>
@@ -56,6 +103,12 @@
         <section id="hero">
             <h2>Selamat Datang di VIN NESIA 🌟</h2>
             <p>Temukan berita viral, tips produktivitas, dan inspirasi terbaru untuk tahun 2025! 🚀</p>
+            <!-- Slideshow -->
+            <div class="hero-slideshow">
+                <div class="hero-slide active"><img src="assets/images/jepang-vs-china.jpg" alt="Jepang vs China EAFF E-1 2025"></div>
+                <div class="hero-slide"><img src="assets/images/cuaca-pertanian.jpg" alt="Strategi Pertanian 2025"></div>
+                <div class="hero-slide"><img src="assets/images/cara-cepat-dapat-cuan.jpg" alt="Cara Cepat Dapat Cuan 2025"></div>
+            </div>
             <div class="search-bar">
                 <input type="text" id="search-input" placeholder="Cari artikel... 🔍" onkeyup="searchArticles()">
                 <button onclick="searchArticles()"><i class="fas fa-search"></i></button>
@@ -66,7 +119,7 @@
         <section id="berita">
             <h2>Berita Terbaru 🔔</h2>
             <div class="berita-grid">
-                <article class="berita-item">
+                <article class="berita-item" data-category="sepak-bola">
                     <a href="articles/jepang-vs-china-eaff-e-1-2025.html"><img src="assets/images/jepang-vs-china.jpg" alt="Jepang vs China EAFF E-1 2025" loading="lazy"></a>
                     <h3><a href="articles/jepang-vs-china-eaff-e-1-2025.html">Jepang vs China EAFF E-1 2025: Prediksi & Analisis</a></h3>
                     <p>Ikuti prediksi skor dan analisis terbaru duel epik di Yongin Mireu Stadium hari ini!</p>
@@ -81,7 +134,7 @@
                         <a href="https://pinterest.com/pin/create/button/?url=https://vinnesiaaa.github.io/Vin/articles/jepang-vs-china-eaff-e-1-2025.html&description=Jepang vs China EAFF E-1 2025: Prediksi & Analisis" target="_blank"><i class="fab fa-pinterest-p"></i></a>
                     </div>
                 </article>
-                <article class="berita-item">
+                <article class="berita-item" data-category="pertanian">
                     <a href="articles/cuaca-pertanian.html"><img src="assets/images/cuaca-pertanian.jpg" alt="Strategi Pertanian Menghadapi Cuaca Ekstrem 2025" loading="lazy"></a>
                     <h3><a href="articles/cuaca-pertanian.html">Strategi Pertanian Menghadapi Cuaca Ekstrem 2025 🌱</a></h3>
                     <p>Belajar cara bertahan dan beradaptasi dengan perubahan iklim di sektor pertanian. 🌍</p>
@@ -96,7 +149,7 @@
                         <a href="https://pinterest.com/pin/create/button/?url=https://vinnesiaaa.github.io/Vin/articles/cuaca-pertanian.html&description=Strategi Pertanian Menghadapi Cuaca Ekstrem 2025" target="_blank"><i class="fab fa-pinterest-p"></i></a>
                     </div>
                 </article>
-                <article class="berita-item">
+                <article class="berita-item" data-category="ekonomi">
                     <a href="articles/kebijakan-ekonomi.html"><img src="assets/images/kebijakan-ekonomi.jpg" alt="Peluang Bisnis dari Kebijakan Ekonomi 2025" loading="lazy"></a>
                     <h3><a href="articles/kebijakan-ekonomi.html">Peluang Bisnis dari Kebijakan Ekonomi 2025 💰</a></h3>
                     <p>Manfaatkan kebijakan terbaru untuk memulai usaha yang menguntungkan. 📈</p>
@@ -111,7 +164,7 @@
                         <a href="https://pinterest.com/pin/create/button/?url=https://vinnesiaaa.github.io/Vin/articles/kebijakan-ekonomi.html&description=Peluang Bisnis dari Kebijakan Ekonomi 2025" target="_blank"><i class="fab fa-pinterest-p"></i></a>
                     </div>
                 </article>
-                <article class="berita-item">
+                <article class="berita-item" data-category="teknologi">
                     <a href="articles/tekanan-global.html"><img src="assets/images/tekanan-global.jpg" alt="Tekanan Global di Era Digital 2025" loading="lazy"></a>
                     <h3><a href="articles/tekanan-global.html">Tekanan Global di Era Digital 2025 💻</a></h3>
                     <p>Bagaimana teknologi memengaruhi kehidupan global di tahun ini? 🌐</p>
@@ -126,7 +179,7 @@
                         <a href="https://pinterest.com/pin/create/button/?url=https://vinnesiaaa.github.io/Vin/articles/tekanan-global.html&description=Tekanan Global di Era Digital 2025" target="_blank"><i class="fab fa-pinterest-p"></i></a>
                     </div>
                 </article>
-                <article class="berita-item">
+                <article class="berita-item" data-category="kesehatan-jiwa">
                     <a href="articles/migrasi-mental.html"><img src="assets/images/migrasi-mental.jpg" alt="Migrasi Mental: Tren Baru 2025" loading="lazy"></a>
                     <h3><a href="articles/migrasi-mental.html">Migrasi Mental: Tren Baru 2025 🧠</a></h3>
                     <p>Pahami fenomena migrasi mental dan dampaknya pada kesehatan jiwa. ❤️</p>
@@ -141,7 +194,7 @@
                         <a href="https://pinterest.com/pin/create/button/?url=https://vinnesiaaa.github.io/Vin/articles/migrasi-mental.html&description=Migrasi Mental: Tren Baru 2025" target="_blank"><i class="fab fa-pinterest-p"></i></a>
                     </div>
                 </article>
-                <article class="berita-item">
+                <article class="berita-item" data-category="produktivitas">
                     <a href="articles/blog-post.html"><img src="assets/images/productivity.jpg" alt="Meningkatkan Produktivitas di 2025" loading="lazy"></a>
                     <h3><a href="articles/blog-post.html">Meningkatkan Produktivitas di 2025 ⏳</a></h3>
                     <p>Tips praktis untuk produktivitas maksimal di era modern. 🚀</p>
@@ -156,7 +209,7 @@
                         <a href="https://pinterest.com/pin/create/button/?url=https://vinnesiaaa.github.io/Vin/articles/blog-post.html&description=Meningkatkan Produktivitas di 2025" target="_blank"><i class="fab fa-pinterest-p"></i></a>
                     </div>
                 </article>
-                <article class="berita-item">
+                <article class="berita-item" data-category="pertanian">
                     <a href="articles/bmkg-kemarau.html"><img src="assets/images/bmkg.jpg" alt="Prakiraan BMKG: Musim Kemarau 2025" loading="lazy"></a>
                     <h3><a href="articles/bmkg-kemarau.html">Prakiraan BMKG: Musim Kemarau 2025 🌞</a></h3>
                     <p>Persiapan menghadapi kemarau panjang berdasarkan data terbaru. 📊</p>
@@ -171,7 +224,7 @@
                         <a href="https://pinterest.com/pin/create/button/?url=https://vinnesiaaa.github.io/Vin/articles/bmkg-kemarau.html&description=Prakiraan BMKG: Musim Kemarau 2025" target="_blank"><i class="fab fa-pinterest-p"></i></a>
                     </div>
                 </article>
-                <article class="berita-item">
+                <article class="berita-item" data-category="bisnis-online">
                     <a href="articles/cara-cepat-dapat-cuan-2025.html"><img src="assets/images/cara-cepat-dapat-cuan.jpg" alt="Cara Cepat Dapat Cuan 2025" loading="lazy"></a>
                     <h3><a href="articles/cara-cepat-dapat-cuan-2025.html">Cara Cepat Dapat Cuan 2025 📈</a></h3>
                     <p>Temukan strategi terbaru untuk sukses finansial di 2025 dengan tips praktis! 💰</p>
@@ -186,7 +239,7 @@
                         <a href="https://pinterest.com/pin/create/button/?url=https://vinnesiaaa.github.io/Vin/articles/cara-cepat-dapat-cuan-2025.html&description=Cara Cepat Dapat Cuan 2025" target="_blank"><i class="fab fa-pinterest-p"></i></a>
                     </div>
                 </article>
-                <article class="berita-item">
+                <article class="berita-item" data-category="bisnis-online">
                     <a href="articles/cara-cepat-dapat-cuan-jadi-affiliate-tiktok.html"><img src="assets/images/cara-cepat-affiliate-tiktok.jpg" alt="Cara Cepat Dapat Cuan Jadi Affiliate TikTok 2025" loading="lazy"></a>
                     <h3><a href="articles/cara-cepat-dapat-cuan-jadi-affiliate-tiktok.html">Cara Cepat Dapat Cuan Jadi Affiliate TikTok 📈</a></h3>
                     <p>Pelajari strategi terbaru untuk menghasilkan cuan dari affiliate TikTok di 2025! 🎥</p>
@@ -207,7 +260,7 @@
 
     <footer>
         <div class="container">
-            <p>© 2025 Vin Nesia. All rights reserved. Last updated: 2025-07-12 23:20 WIB.</p>
+            <p>© 2025 Vin Nesia. All rights reserved. Last updated: 2025-07-13 00:49 WIB.</p>
             <p>
                 <a href="https://github.com/Vinnesiaaa/Vin" target="_blank">GitHub</a> |
                 <a href="mailto:vinn.nesiaa.id@gmail.com">Email</a> |
@@ -223,5 +276,32 @@
         </div>
     </footer>
     <script src="js/script.js"></script>
+    <script>
+        // Fungsi untuk slideshow
+        let slideIndex = 0;
+        const slides = document.querySelectorAll('.hero-slide');
+        function showSlides() {
+            slides.forEach(slide => slide.classList.remove('active'));
+            slideIndex++;
+            if (slideIndex > slides.length) slideIndex = 1;
+            slides[slideIndex - 1].classList.add('active');
+            setTimeout(showSlides, 5000); // Ganti slide setiap 5 detik
+        }
+        showSlides();
+
+        // Fungsi pencarian sederhana
+        function searchArticles() {
+            let input = document.getElementById('search-input').value.toLowerCase();
+            let articles = document.getElementsByClassName('berita-item');
+            for (let i = 0; i < articles.length; i++) {
+                let text = articles[i].innerText.toLowerCase();
+                if (text.includes(input)) {
+                    articles[i].style.display = '';
+                } else {
+                    articles[i].style.display = 'none';
+                }
+            }
+        }
+    </script>
 </body>
 </html>
