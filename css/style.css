@@ -134,6 +134,12 @@ nav ul li a:hover {
     color: #2c3e50;
 }
 
+.category-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
 .category-grid {
     display: flex;
     justify-content: center;
@@ -160,6 +166,27 @@ nav ul li a:hover {
     background-color: #c0392b;
     transform: translateY(-2px);
     box-shadow: 0 4px 10px rgba(231, 76, 60, 0.4);
+}
+
+.category-dropdown {
+    display: none; /* Sembunyikan di desktop */
+    width: 100%;
+    max-width: 300px;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin-bottom: 15px;
+    background-color: #ffffff;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    appearance: none;
+    cursor: pointer;
+}
+
+.category-dropdown:focus {
+    outline: none;
+    border-color: #e74c3c;
+    box-shadow: 0 0 5px rgba(231, 76, 60, 0.5);
 }
 
 #hero {
@@ -357,18 +384,10 @@ article p {
         font-size: 20px;
     }
     .category-grid {
-        display: flex;
-        justify-content: center;
-        gap: 8px; /* Spacing lebih ketat untuk HP */
-        flex-wrap: nowrap; /* Pastikan berjejer tanpa pindah baris */
-        overflow-x: auto; /* Scroll horizontal jika kelebihan lebar */
-        padding: 10px 0;
+        display: none; /* Sembunyikan grid di HP */
     }
-    .category-card {
-        flex-shrink: 0; /* Hindari menyusut */
-        font-size: 14px;
-        padding: 8px 15px;
-        white-space: nowrap; /* Tekan teks agar tidak patah */
+    .category-dropdown {
+        display: block; /* Tampilkan dropdown di HP */
     }
     #hero h2 {
         font-size: 20px;
