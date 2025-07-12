@@ -130,7 +130,7 @@ nav ul li a:hover {
     overflow: hidden;
 }
 
-#kategori h2 {
+.category-title {
     font-family: 'Playfair Display', serif;
     font-size: 28px;
     margin-bottom: 20px;
@@ -138,6 +138,7 @@ nav ul li a:hover {
     color: #2c3e50;
     text-transform: uppercase;
     letter-spacing: 1px;
+    text-shadow: 1px 1px 3px rgba(52, 152, 219, 0.2);
 }
 
 .category-wrapper {
@@ -160,17 +161,24 @@ nav ul li a:hover {
     color: #2c3e50;
     appearance: none;
     cursor: pointer;
-    transition: all 0.3s ease, transform 0.2s ease;
+    transition: all 0.3s ease, transform 0.2s ease, opacity 0.3s ease;
     position: relative;
     z-index: 1;
-    overflow: hidden;
+    opacity: 0.9;
 }
 
 .category-dropdown:focus {
     outline: none;
     box-shadow: 0 6px 15px rgba(52, 152, 219, 0.3);
     transform: scale(1.05) rotate(2deg);
-    background: linear-gradient(90deg, #ffffff, #e8ecef);
+    opacity: 1;
+    animation: fadeIn 0.3s ease-in-out;
+}
+
+.category-dropdown:hover {
+    transform: scale(1.02);
+    opacity: 1;
+    animation: fadeIn 0.3s ease-in-out;
 }
 
 .category-dropdown::after {
@@ -181,7 +189,7 @@ nav ul li a:hover {
     transform: translateY(-50%);
     font-size: 12px;
     color: #3498db;
-    transition: all 0.3s ease;
+    transition: all 0.3s ease, transform 0.3s ease;
 }
 
 .category-dropdown:hover::after {
@@ -194,11 +202,21 @@ nav ul li a:hover {
     padding: 10px;
     background: #ffffff;
     color: #2c3e50;
-    transition: background 0.2s ease;
+    transition: background 0.2s ease, opacity 0.2s ease;
 }
 
 .category-dropdown option:hover {
     background: #ecf0f1;
+    opacity: 0.95;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
 }
 
 #hero {
@@ -403,7 +421,7 @@ article p {
     .container {
         padding: 10px;
     }
-    #kategori h2 {
+    .category-title {
         font-size: 22px;
     }
     .category-dropdown {
