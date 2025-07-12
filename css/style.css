@@ -1,3 +1,6 @@
+/* Vin Nesia Stylesheet */
+/* Last Updated: 2025-07-12T07:07:00+07:00 */
+
 * {
     margin: 0;
     padding: 0;
@@ -207,6 +210,26 @@ article p {
     transform: scale(1.05);
 }
 
+.breadcrumb {
+    margin: 20px 0;
+    font-size: 0.9em;
+    color: #7f8c8d;
+}
+
+.breadcrumb a {
+    color: #2980b9;
+    text-decoration: none;
+    margin: 0 5px;
+}
+
+.breadcrumb a:hover {
+    text-decoration: underline;
+}
+
+.breadcrumb span {
+    margin: 0 5px;
+}
+
 footer {
     background: linear-gradient(90deg, #2c3e50 0%, #34495e 100%);
     color: #ffffff;
@@ -329,6 +352,9 @@ footer a:hover {
     #kategori {
         padding-top: 20px;
     }
+    .breadcrumb {
+        font-size: 0.85em;
+    }
 }
 
 @media (max-width: 768px) {
@@ -385,6 +411,11 @@ footer a:hover {
         padding-top: 15px;
         margin-bottom: 20px;
     }
+
+    .breadcrumb {
+        font-size: 0.8em;
+        margin: 15px 0;
+    }
 }
 
 @media (max-width: 480px) {
@@ -402,5 +433,9 @@ footer a:hover {
     }
     #kategori {
         padding-top: 10px;
+    }
+    .breadcrumb {
+        font-size: 0.75em;
+        margin: 10px 0;
     }
 }
