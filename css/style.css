@@ -137,7 +137,7 @@ nav ul li a:hover {
 .category-grid {
     display: flex;
     justify-content: center;
-    gap: 15px;
+    gap: 10px;
     flex-wrap: wrap;
 }
 
@@ -153,6 +153,7 @@ nav ul li a:hover {
     transition: all 0.3s ease;
     box-shadow: 0 2px 5px rgba(231, 76, 60, 0.3);
     text-align: center;
+    white-space: nowrap;
 }
 
 .category-card:hover {
@@ -356,14 +357,18 @@ article p {
         font-size: 20px;
     }
     .category-grid {
-        flex-direction: column;
-        align-items: center;
+        display: flex;
+        justify-content: center;
+        gap: 8px; /* Spacing lebih ketat untuk HP */
+        flex-wrap: nowrap; /* Pastikan berjejer tanpa pindah baris */
+        overflow-x: auto; /* Scroll horizontal jika kelebihan lebar */
+        padding: 10px 0;
     }
     .category-card {
-        width: 80%;
-        margin-bottom: 10px;
+        flex-shrink: 0; /* Hindari menyusut */
         font-size: 14px;
         padding: 8px 15px;
+        white-space: nowrap; /* Tekan teks agar tidak patah */
     }
     #hero h2 {
         font-size: 20px;
@@ -389,16 +394,6 @@ article p {
     }
     .berita-item p {
         font-size: 12px;
-    }
-    #kategori h2 {
-        font-size: 20px;
-    }
-    .category-grid {
-        grid-template-columns: 1fr;
-    }
-    .category-card {
-        font-size: 14px;
-        padding: 8px 15px;
     }
     article {
         padding: 15px;
