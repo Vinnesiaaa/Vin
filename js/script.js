@@ -62,5 +62,16 @@ function searchArticles() {
     });
 }
 
+// Tambah event listener untuk tombol search
+document.addEventListener('DOMContentLoaded', function() {
+    const searchButton = document.querySelector('.search-bar button');
+    if (searchButton) {
+        searchButton.addEventListener('click', function(event) {
+            event.preventDefault(); // Hindari refresh halaman jika ada form
+            searchArticles();
+        });
+    }
+});
+
 // Jalankan filter kategori saat halaman dimuat
 window.onload = filterCategory;
