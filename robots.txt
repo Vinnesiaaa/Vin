@@ -1,4 +1,4 @@
 User-agent: *
-Allow: /
-
+Allow: /articles/
+Disallow: /admin/
 Sitemap: https://vinnesiaaa.github.io/Vin/sitemap.xml
