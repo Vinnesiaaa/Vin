@@ -123,29 +123,31 @@ nav ul li a:hover {
 #kategori {
     padding: 25px 0;
     margin-bottom: 30px;
-    background: linear-gradient(135deg, #ffffff, #ecf0f1);
+    background: linear-gradient(135deg, #ffffff, #e8ecef);
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
-    border-radius: 12px;
+    border-radius: 15px;
+    border: 2px solid transparent;
+    border-image: linear-gradient(45deg, #d4a017, #27ae60) 1;
     position: relative;
     overflow: hidden;
 }
 
 .category-title {
-    font-family: 'Cormorant Garamond', serif;
-    font-size: 32px;
+    font-family: 'Great Vibes', cursive;
+    font-size: 36px;
     margin-bottom: 20px;
     text-align: center;
     color: #2c3e50;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    text-shadow: 2px 2px 6px rgba(52, 152, 219, 0.3), -1px -1px 4px rgba(255, 255, 255, 0.5);
-    background: linear-gradient(90deg, #3498db, #8e44ad);
+    text-shadow: 2px 2px 6px rgba(212, 160, 23, 0.4), -1px -1px 4px rgba(255, 255, 255, 0.6);
+    background: linear-gradient(90deg, #d4a017, #27ae60); /* Emas ke Hijau */
     -webkit-background-clip: text;
     background-clip: text;
     color: transparent;
-    padding: 5px 15px;
-    border-radius: 10px;
+    padding: 8px 20px;
+    border-radius: 12px;
     display: inline-block;
+    border: 2px solid transparent;
+    border-image: linear-gradient(45deg, #d4a017, #27ae60) 1;
 }
 
 .category-wrapper {
@@ -161,9 +163,10 @@ nav ul li a:hover {
     padding: 12px 40px 12px 15px;
     font-size: 16px;
     font-weight: 500;
-    border: none;
+    border: 2px solid transparent;
+    border-image: linear-gradient(45deg, #d4a017, #27ae60) 1;
     border-radius: 25px;
-    background: linear-gradient(90deg, #ffffff, #f5f6fa);
+    background: linear-gradient(90deg, #ffffff, #f9fbfc);
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
     color: #2c3e50;
     appearance: none;
@@ -176,7 +179,7 @@ nav ul li a:hover {
 
 .category-dropdown:focus {
     outline: none;
-    box-shadow: 0 6px 15px rgba(52, 152, 219, 0.3);
+    box-shadow: 0 6px 15px rgba(212, 160, 23, 0.3);
     transform: scale(1.05) rotate(2deg);
     opacity: 1;
     animation: fadeIn 0.3s ease-in-out;
@@ -189,40 +192,49 @@ nav ul li a:hover {
 }
 
 .category-dropdown::after {
-    content: '▼';
+    content: '';
     position: absolute;
     top: 50%;
     right: 15px;
     transform: translateY(-50%);
-    font-size: 12px;
-    color: #3498db;
+    width: 0;
+    height: 0;
+    border-left: 6px solid transparent;
+    border-right: 6px solid transparent;
+    border-top: 6px solid #27ae60;
     transition: all 0.3s ease, transform 0.3s ease;
 }
 
 .category-dropdown:hover::after {
     transform: translateY(-50%) rotate(180deg);
-    color: #2980b9;
+    border-top-color: #d4a017;
 }
 
 .default-option {
-    font-family: 'Cormorant Garamond', serif;
+    font-family: 'Great Vibes', cursive;
     font-size: 18px;
     color: #7f8c8d;
     text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
 }
 
 .category-option {
-    font-family: 'Cormorant Garamond', serif;
+    font-family: 'Great Vibes', cursive;
     font-size: 16px;
     color: #2c3e50;
-    text-shadow: 1px 1px 2px rgba(52, 152, 219, 0.1);
+    text-shadow: 1px 1px 2px rgba(212, 160, 23, 0.1);
     background: linear-gradient(90deg, #ffffff, #f9fbfc);
     transition: background 0.2s ease, color 0.2s ease;
 }
 
 .category-option:hover {
     background: #ecf0f1;
-    color: #3498db;
+    color: #27ae60;
+}
+
+.dropdown-icon {
+    margin-left: 5px;
+    font-size: 14px;
+    vertical-align: middle;
 }
 
 @keyframes fadeIn {
@@ -437,7 +449,7 @@ article p {
         padding: 10px;
     }
     .category-title {
-        font-size: 24px;
+        font-size: 28px;
         letter-spacing: 1px;
     }
     .category-dropdown {
