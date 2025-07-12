@@ -1,3 +1,4 @@
+/* Reset default styles */
 * {
     margin: 0;
     padding: 0;
@@ -14,7 +15,7 @@ body {
 .container {
     max-width: 1200px;
     margin: 0 auto;
-    padding: 15px; /* Mengurangi padding untuk HP */
+    padding: 15px;
 }
 
 /* Header Styles */
@@ -151,17 +152,17 @@ nav ul li a:hover {
 
 .berita-item {
     margin-bottom: 20px;
-    overflow: hidden; /* Menghindari overflow gambar */
+    overflow: hidden;
 }
 
 .berita-item img {
     max-width: 100%;
     height: auto;
     border-radius: 5px;
-    max-height: 300px; /* Batas tinggi untuk desktop */
-    object-fit: cover; /* Memastikan gambar tidak memanjang */
-    display: block; /* Menghindari spasi tambahan */
-    margin: 0 auto; /* Pusatkan gambar */
+    max-height: 300px;
+    object-fit: cover;
+    display: block;
+    margin: 0 auto;
 }
 
 .berita-item h3 {
@@ -182,6 +183,56 @@ nav ul li a:hover {
     padding: 0 10px;
 }
 
+article {
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+
+article img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px;
+    max-height: 300px;
+    object-fit: cover;
+    margin-bottom: 15px;
+}
+
+article h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 28px;
+    margin-bottom: 10px;
+    color: #2c3e50;
+}
+
+article h2 {
+    font-size: 22px;
+    margin: 15px 0;
+    color: #34495e;
+}
+
+article p {
+    font-size: 16px;
+    margin-bottom: 15px;
+    line-height: 1.8;
+}
+
+.breadcrumb {
+    font-size: 14px;
+    margin-bottom: 15px;
+    color: #7f8c8d;
+}
+
+.breadcrumb a {
+    color: #e74c3c;
+    text-decoration: none;
+}
+
+.breadcrumb a:hover {
+    text-decoration: underline;
+}
+
 #kategori {
     background-color: #f9f9f9;
     padding: 20px;
@@ -200,7 +251,7 @@ nav ul li a:hover {
     list-style: none;
     display: flex;
     justify-content: space-around;
-    flex-wrap: wrap; /* Membungkus item di HP */
+    flex-wrap: wrap;
 }
 
 #kategori ul li {
@@ -217,6 +268,20 @@ nav ul li a:hover {
 
 #kategori ul li a:hover {
     color: #c0392b;
+}
+
+.tags {
+    margin-top: 10px;
+    text-align: center;
+}
+
+.tags span {
+    background-color: #e74c3c;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+    margin: 0 5px;
+    font-size: 12px;
 }
 
 /* Optimasi untuk HP */
@@ -238,7 +303,7 @@ nav ul li a:hover {
         font-size: 20px;
     }
     .berita-item img {
-        max-height: 180px; /* Batas tinggi untuk HP */
+        max-height: 180px;
     }
     .berita-item h3 {
         font-size: 16px;
@@ -260,7 +325,7 @@ nav ul li a:hover {
         padding: 10px;
     }
     article img {
-        max-height: 200px; /* Batas tinggi untuk artikel di HP */
+        max-height: 200px;
         width: 100%;
     }
     article h1 {
@@ -275,6 +340,10 @@ nav ul li a:hover {
     .breadcrumb {
         font-size: 12px;
         padding: 5px;
+    }
+    .tags span {
+        font-size: 10px;
+        padding: 3px 7px;
     }
 }
 
